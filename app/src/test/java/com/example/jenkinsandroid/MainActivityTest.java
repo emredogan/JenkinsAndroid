@@ -9,6 +9,6 @@ public class MainActivityTest {
 
     @Test
     public void addition() {
-        assertThat(9, is(MainActivity.additions(5,3)));
+        assertThat(8, is(MainActivity.additions(5,3)));
     }
 }
