@@ -26,6 +26,7 @@ android {
         targetSdkVersion 29
         versionName computeVersionName()
         versionCode computeVersionCode()
+        project.ext.set("archivesBaseName", "MyApp-" + versionName + "-" + versionCode);
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
