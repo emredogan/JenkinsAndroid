@@ -1,4 +1,4 @@
-package com.example.jenkinsandroid;
+package com.emredogan.jenkinsandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 

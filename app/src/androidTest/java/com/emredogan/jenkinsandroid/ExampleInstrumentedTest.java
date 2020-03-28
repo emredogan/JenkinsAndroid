@@ -1,4 +1,4 @@
-package com.example.jenkinsandroid;
+package com.emredogan.jenkinsandroid;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.jenkinsandroid", appContext.getPackageName());
+        assertEquals("com.emredogan.jenkinsandroid", appContext.getPackageName());
     }
 }
