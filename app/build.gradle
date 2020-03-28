@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
-
+// Used to set the package version name and version code
+ext.versionMajor = 3
+ext.versionMinor = 1
 
 
 android {
@@ -22,8 +24,8 @@ android {
         applicationId "com.emredogan.jenkinsandroid"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 5
-        versionName "1.4"
+        versionName computeVersionName()
+        versionCode computeVersionCode()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -45,4 +47,18 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+// Will return "1.2" in this example
+def computeVersionName() {
+    // Basic <major>.<minor> version name
+    return String.format('%d.%d', versionMajor, versionMinor)
+}
+
+// Will return 120042 for Jenkins build #42
+def computeVersionCode() {
+    // Major + minor + Jenkins build number (where available)
+    return (versionMajor * 100000)
+    + (versionMinor * 10000)
+    + Integer.valueOf(System.env.BUILD_NUMBER ?: 0)
 }
