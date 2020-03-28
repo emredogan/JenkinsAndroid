@@ -11,9 +11,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        System.out.println("cool1");
-        System.out.println("cool2");
-        System.out.println("cool3");
-        System.out.println("cool4");
+
+    }
+
+    public static int additions(int a, int b) {
+        return a + b;
     }
 }
