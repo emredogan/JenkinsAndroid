@@ -60,5 +60,5 @@ def computeVersionCode() {
     // Major + minor + Jenkins build number (where available)
     return (versionMajor * 100000)
     + (versionMinor * 10000)
-    + Integer.valueOf(System.getenv("BUILD_NUMBER") ?: 0)
+    + Integer.valueOf(System.getenv("BUILD_NUMBER") as Integer ?: 0)
 }
